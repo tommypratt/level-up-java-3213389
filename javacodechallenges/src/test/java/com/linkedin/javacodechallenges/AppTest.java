@@ -9,23 +9,20 @@ import org.junit.Test;
  * Unit test for simple App.
  */
 public class AppTest {
-    /**
-     * Commented out as IsEven was updated to a void
-     * 
-     * @Test
-     *       public void shouldAnswerWithTrue() {
-     *       assertTrue(App.IsEven(4));
-     *       assertTrue(App.IsEven(2));
-     *       assertTrue(App.IsEven(-4));
-     *       assertTrue(App.IsEven(-2));
-     *       }
-     * 
-     * @Test
-     *       public void shouldAnswerWithFalse() {
-     *       assertFalse(App.IsEven(1));
-     *       assertFalse(App.IsEven(3));
-     *       assertFalse(App.IsEven(-1));
-     *       assertFalse(App.IsEven(-23));
-     *       }
-     */
+
+    @Test
+    public void shouldAnswerWithTrue() {
+        assertTrue(App.isEven(4));
+        assertTrue(App.isEven(2));
+        assertTrue(App.isEven(-4));
+        assertTrue(App.isEven(-2));
+    }
+
+    @Test
+    public void shouldAnswerWithFalse() {
+        assertFalse(App.isEven(1));
+        assertFalse(App.isEven(3));
+        assertFalse(App.isEven(-1));
+        assertFalse(App.isEven(-23));
+    }
 }
