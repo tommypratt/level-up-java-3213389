@@ -22,34 +22,46 @@ public class App {
      */
 
     public static boolean isPasswordComplex(String input) {
-        int lower = 0, upper = 0, numeric = 0;
+        return input.length() >= 6
+                && input.matches(".*\\d.*") // find number
+                && input.matches(".*[a-z].*") // find lowercase
+                && input.matches(".*[A-Z].*"); // find uppercase
 
-        if (input.length() < 6)
-            return false;
+        // long way vs regex way
+        // int lower = 0, upper = 0, numeric = 0;
 
-        for (char i : input.toCharArray()) {
-            if (Character.isUpperCase(i))
-                upper++;
-            else if (Character.isLowerCase(i))
-                lower++;
-            else if (Character.isDigit(i))
-                numeric++;
-        }
+        // if (input.length() < 6)
+        // return false;
 
-        if (upper == 0 || lower == 0 || numeric == 0)
-            return false;
+        // for (char i : input.toCharArray()) {
+        // if (Character.isUpperCase(i))
+        // upper++;
+        // else if (Character.isLowerCase(i))
+        // lower++;
+        // else if (Character.isDigit(i))
+        // numeric++;
+        // }
 
-        return true;
+        // if (upper == 0 || lower == 0 || numeric == 0)
+        // return false;
+
+        // return true;
     }
+
+
+    // public static void main(String[] args) {
+    //     Scanner reader = new Scanner(System.in);
+
+    //     System.out.println("Enter a Password: ");
+    //     String input = reader.nextLine();
+
+    //     System.out.println("Is the password complex? " + isPasswordComplex(input));
+    //     reader.close();
+    // }
 
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
+        DoubleOrNothing game = new DoubleOrNothing();
+        game.playGame();
 
-        System.out.println("Enter a Password: ");
-        String input = reader.nextLine();
-
-        System.out.println("Is the password complex? " + isPasswordComplex(input));
-        reader.close();
     }
-
 }
