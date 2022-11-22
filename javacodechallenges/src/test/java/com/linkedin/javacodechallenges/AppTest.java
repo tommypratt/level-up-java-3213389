@@ -10,21 +10,22 @@ import org.junit.Test;
  */
 public class AppTest {
     /**
-     * Rigorous Test :-)
+     * Commented out as IsEven was updated to a void
+     * 
+     * @Test
+     *       public void shouldAnswerWithTrue() {
+     *       assertTrue(App.IsEven(4));
+     *       assertTrue(App.IsEven(2));
+     *       assertTrue(App.IsEven(-4));
+     *       assertTrue(App.IsEven(-2));
+     *       }
+     * 
+     * @Test
+     *       public void shouldAnswerWithFalse() {
+     *       assertFalse(App.IsEven(1));
+     *       assertFalse(App.IsEven(3));
+     *       assertFalse(App.IsEven(-1));
+     *       assertFalse(App.IsEven(-23));
+     *       }
      */
-    @Test
-    public void shouldAnswerWithTrue() {
-        assertTrue(App.IsEven(4));
-        assertTrue(App.IsEven(2));
-        assertTrue(App.IsEven(-4));
-        assertTrue(App.IsEven(-2));
-    }
-
-    @Test
-    public void shouldAnswerWithFalse() {
-        assertFalse(App.IsEven(1));
-        assertFalse(App.IsEven(3));
-        assertFalse(App.IsEven(-1));
-        assertFalse(App.IsEven(-23));
-    }
 }
