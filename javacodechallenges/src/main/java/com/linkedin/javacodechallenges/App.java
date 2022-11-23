@@ -1,6 +1,11 @@
 package com.linkedin.javacodechallenges;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.Period;
 
 public class App {
 
@@ -67,26 +72,57 @@ public class App {
     // }
     // ******END DOUBLE OR NOTHING */
 
-    //*****START CHALLENGE CALCULATE WATER BILL */
+    // *****START CHALLENGE CALCULATE WATER BILL */
+    // public static double calculateWaterBill(double gallonsUsage)
+    // {
+    // double amountOwing = 18.84;
+    // double ccf = gallonsUsage / 748;
 
-    public static double calculateWaterBill(double gallonsUsage)
-    {
-        double amountOwing = 18.84;
-        double ccf = gallonsUsage / 748;
+    // if(ccf - 2 > 0)
+    // {
+    // amountOwing = (Math.ceil(ccf - 2)) * 3.90 + amountOwing;
+    // }
 
-        if(ccf - 2 > 0)
-        {
-            amountOwing = (Math.ceil(ccf - 2)) * 3.90 + amountOwing; 
-        }
+    // return amountOwing;
+    // }
 
-        return amountOwing;
-    }
+    // public static void main(String[] args) {
+    // Scanner reader = new Scanner(System.in);
+    // System.out.println("How many gallons of water did you use this month?");
+    // double usage = reader.nextDouble();
+    // System.out.println("Your waterbill is $" + calculateWaterBill(usage));
+    // reader.close();
+    // }
+    // ******END CALCULATE WATER BILL */
 
-    public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("How many gallons of water did you use this month?");
-        double usage = reader.nextDouble();
-        System.out.println("Your waterbill is $" + calculateWaterBill(usage));
-        reader.close();
-    }
+    // ******START CHALLENGE MODEL A PERSON */
+    // public static void main(String[] args) {
+    // Person p1 = new Person("Tommy", "Pratt", 27);
+    // Person p2 = new Person("Gillian", "Dunn", 25);
+
+    // p2.setAge(26);
+
+    // p1.introduction();
+    // }
+    // ******END MODEL A PERSON */
+
+    // *****START 100 DAYS FROM NOW */
+    // public static void main(String[] args) {
+    //     LocalDate today = LocalDate.now(ZoneId.of("Australia/Sydney"));
+    //     System.out.println("100 days from now is " + oneHundredDaysFromNow(today));
+    // }
+
+    // public static LocalDate oneHundredDaysFromNow(LocalDate today) {
+    //     // can use calendar but java.time.* is better
+    //     // Calendar today = Calendar.getInstance();
+    //     // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    //     // today.add(Calendar.DAY_OF_MONTH, 100);
+    //     // return sdf.format(today.getTime());
+
+    //     Period hundredDays = Period.ofDays(100);
+    //     return today.plus(hundredDays);
+    // }
+    //******END 100 DAYS FROM NOW */
+    
+
 }

@@ -11,13 +11,13 @@ import org.junit.Test;
  */
 public class AppTest {
 
-    @Test
-    public void calculateWaterBill(){
-        assertEquals(22.74, App.calculateWaterBill(1800), 0);
-        assertEquals(22.74, App.calculateWaterBill(2244), 0);
-        assertEquals(26.64, App.calculateWaterBill(2245), 0);
-        assertEquals(46.14, App.calculateWaterBill(6000), 0);
-    }
+    // @Test
+    // public void calculateWaterBill(){
+    // assertEquals(22.74, App.calculateWaterBill(1800), 0);
+    // assertEquals(22.74, App.calculateWaterBill(2244), 0);
+    // assertEquals(26.64, App.calculateWaterBill(2245), 0);
+    // assertEquals(46.14, App.calculateWaterBill(6000), 0);
+    // }
 
     // @Test
     // public void shouldAnswerWithTrue() {
