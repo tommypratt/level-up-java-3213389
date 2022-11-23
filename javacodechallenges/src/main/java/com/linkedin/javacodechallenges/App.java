@@ -1,7 +1,11 @@
 package com.linkedin.javacodechallenges;
 
+import java.security.KeyStore.Entry;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -108,21 +112,52 @@ public class App {
 
     // *****START 100 DAYS FROM NOW */
     // public static void main(String[] args) {
-    //     LocalDate today = LocalDate.now(ZoneId.of("Australia/Sydney"));
-    //     System.out.println("100 days from now is " + oneHundredDaysFromNow(today));
+    // LocalDate today = LocalDate.now(ZoneId.of("Australia/Sydney"));
+    // System.out.println("100 days from now is " + oneHundredDaysFromNow(today));
     // }
 
     // public static LocalDate oneHundredDaysFromNow(LocalDate today) {
-    //     // can use calendar but java.time.* is better
-    //     // Calendar today = Calendar.getInstance();
-    //     // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-    //     // today.add(Calendar.DAY_OF_MONTH, 100);
-    //     // return sdf.format(today.getTime());
+    // // can use calendar but java.time.* is better
+    // // Calendar today = Calendar.getInstance();
+    // // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    // // today.add(Calendar.DAY_OF_MONTH, 100);
+    // // return sdf.format(today.getTime());
 
-    //     Period hundredDays = Period.ofDays(100);
-    //     return today.plus(hundredDays);
+    // Period hundredDays = Period.ofDays(100);
+    // return today.plus(hundredDays);
     // }
-    //******END 100 DAYS FROM NOW */
-    
+    // ******END 100 DAYS FROM NOW */
+
+    /****** START CHALLENGE STUDENT VOLUNTEERS */
+    // public static void main(String[] args) {
+    // List<String> students = List.of("Tom", "Gill", "Josh", "Dean", "Sam");
+
+    // Map<String, List<String>> attendeesMapping = Map.of(
+    // "Farmers Market", List.of("Tom", "Gill", "Joey"),
+    // "Car Wash", List.of("Josh", "Gill", "Dean"),
+    // "Cooking Workshop", List.of("Tom"),
+    // "Midnight Breakfast", List.of("Dean", "Sam"));
+
+    // System.out.println(findStudentsWithIncompleteVolunteerEvents(students,
+    // attendeesMapping));
+    // }
+
+    // public static List<String> findStudentsWithIncompleteVolunteerEvents(
+    // List<String> students, Map<String, List<String>> attendeesMapping) {
+    // List<String> incompleteVolunteerList = new ArrayList<String>();
+
+    // for (String student : students) {
+    // int counter = 0;
+    // for (List<String> attendees : attendeesMapping.values()) {
+    // if (attendees.contains(student))
+    // counter++;
+    // }
+
+    // if (counter < 2)
+    // incompleteVolunteerList.add(student);
+    // }
+    // return incompleteVolunteerList;
+    // }
+    // *******END OF STUDENT VOLUNTEERS */
 
 }
