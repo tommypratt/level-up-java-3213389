@@ -1,5 +1,5 @@
 package com.linkedin.javacodechallenges;
 
-public class LinkedList<T> {
+public @interface Getter {
 
 }
