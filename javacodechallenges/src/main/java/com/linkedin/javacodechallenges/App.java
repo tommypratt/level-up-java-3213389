@@ -10,11 +10,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class App {
     public static void main(String[] args) {
-        List<Double> purchases = List.of(12.38, 38.29, 5.27, 3.21);
-        System.out.println(calculateAverageChangeInvested(purchases));
+        Team team1 = new Team("Tom", "Gill");
+        Team team2 = new Team("Jay", "Ruby");
+        Team team3 = new Team("Dean", "Steph");
+
+        List<Team> teams = List.of(team1, team2, team3);
+        int numberOfRounds = 4;
+
+        TeamUtils.generateTeamsScores(teams, numberOfRounds);
+        TeamUtils.revealResults(teams);
+
     }
 
-    public static double calculateAverageChangeInvested(List<Double> purchases) {
-        return purchases.stream().mapToDouble(x -> Math.ceil(x) - x).average().orElse(0);
-    }
 }
