@@ -1,25 +1,20 @@
 package com.linkedin.javacodechallenges;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.OptionalDouble;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class App {
     public static void main(String[] args) {
-        List<StoreItem> items = List.of(
-                new StoreItem("T-shirt small", 10, .5),
-                new StoreItem("T-shirt large", 20, .16),
-                new StoreItem("T-shirt medium", 15, .5),
-                new StoreItem("Shorts small", 100, .5),
-                new StoreItem("Shorts large", 120, .16),
-                new StoreItem("Shorts medium", 150, .125));
+        List<Double> purchases = List.of(12.38, 38.29, 5.27, 3.21);
+        System.out.println(calculateAverageChangeInvested(purchases));
+    }
 
-        Optional<StoreItem> leastExpensiveOpt = StoreItem.leastExpensiveItem(items);
-        if (leastExpensiveOpt.isPresent()) {
-            System.out.println(leastExpensiveOpt.get());
-        }
-
+    public static double calculateAverageChangeInvested(List<Double> purchases) {
+        return purchases.stream().mapToDouble(x -> Math.ceil(x) - x).average().orElse(0);
     }
 }
